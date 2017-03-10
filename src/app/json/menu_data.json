@@ -1,0 +1,7 @@
+[
+    { "menuTitle":"1.Angular란 무엇인가 ?","submenu":["1.Angular의 특징","2.Angular 2.0 발표"]},
+    { "menuTitle":"2.Angular 2.0의 변화","submenu":["2.1 Angular2.0의 특징","2.2 Angular1.0과 차이","2.3. TypeScript","2.4 Angular2.0의 장단점"]},
+    { "menuTitle":"3.Angular 2.0 구조","submenu":["3.1 Modules","3.2 Component","3.3 Template","3.4 Class","3.5 Metadata","3.6 Directives","3.7 Service","3.8 Dependency"]},
+    { "menuTitle":"4.참고 사이트","submenu":["Angular.io"]}
+   
+]
