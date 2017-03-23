@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>AMI 기반 전압 분석 시스템</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/chartist/chartist.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+   
+</head>
+<body>
+    <div id="wrapper">
+        <!--nav left sidebar-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" src="img/logo_kepri.png" />
+                            </span>
+
+                        </div>
+                        <div class="logo-element">
+                            KE+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-bar-chart"></i> <span class="nav-label">시험계통관리</span><span class="fa arrow"></span> </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#">설비 관리</a></li>
+                            <li>
+                                <a href="#" id="damian">설비 감시 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">계통도</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">단선도</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">GIS</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">설비제어</a></li>
+                            <li><a href="#">검침조회</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-line-chart"></i> <span class="nav-label">시험분석환경</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">알고리즘</a></li>
+                            <li><a href="#">실시간 CVR 효과</a></li>
+                            <li><a href="#">실시간 ON/OFF 비교분석</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">시스템관리</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">사용자관리</a></li>
+                            <li><a href="#">사용자 PC 접근 관리</a></li>
+                            <li><a href="#">대시보드 설정</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-file-text-o"></i> <span class="nav-label">모니터링</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                       <li><a href="monitoring1.html">D/L 전압 변화 추이(2D)</a></li>
+                            <li><a href="monitoring2.html">D/L 전압 변화 추이(3D)</a></li>
+                            <li><a href="monitoring3.html">D/L 특성별 전압 변화 추이</a></li>
+                            <li><a href="monitoring4.html">지사단위 D/L 전압 분포도</a></li>
+                            <li><a href="monitoring5.html">전압 강하 현황</a></li>
+                            <li><a href="monitoring6.html">최대 전압 강하율 현황</a></li>
+                            <li><a href="monitoring7.html">전압 전력 비교</a></li>
+                            <!--<li><a href="monitoring8.html">지사별 전압 현황 분포도</a></li>-->
+                            <li><a href="monitoring9.html">D/L별 규정 전압 유지 분포도</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-list"></i> <span class="nav-label">이력관리</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">설비 제어 이력</a></li>
+                            <li><a href="#">사용자 로그인 이력</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!-- // nav left sidebar-->
+        <!-- content -->
+        <div id="page-wrapper" class="gray-bg">
+
+            <div class="row border-bottom">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">반갑습니다. 관리자님.</span>
+                    </li>
+
+
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!--Path-->
+            <div class="border-bottom m-t-xs">
+                <div class="row wrapper border-bottom white-bg page-heading">
+                    <div class="col-lg-10">
+                        <h2>지사별 전압 현황 분포도</h2>
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a>모니터링</a>
+                            </li>
+                            <li class="active">
+                                <strong>지사별 전압 현황 분포도</strong>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-lg-2">
+
+                    </div>
+                </div>
+
+            </div>
+            <!--//Path-->
+  
+            <!-- content wrapper-->
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>
+                                   지사별 전압 현황 분포도
+                                    <small>With custom colors.</small>
+                                </h5>
+                            </div>
+                            <div class="ibox-content">
+                                  <div class="widget-body no-padding">
+										<div id="sales-graph" class="chart no-padding"></div>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>지사별 전압 현황 분포도</h5>
+                            </div>
+                            <div class="ibox-content">
+                           	<div class="widget-body no-padding">
+										<div id="area-graph" class="chart no-padding"></div>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>지사별 전압 현황 분포도</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="text-center">
+                            <div class="widget-body no-padding">
+										<div id="non-date-graph" class="chart no-padding"></div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>지사별 전압 현황 분포도</h5>
+                            </div>
+                            <div class="ibox-content">
+                           	<div class="widget-body no-padding">
+										<div id="non-continu-graph" class="chart no-padding"></div>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- //content wrapper-->
+            <!-- footer -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer">
+                        <div>
+                            <strong>Copyright</strong> All Rights Reserved KEPRI
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //footer -->
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--<script src="smartAdmin/js/app.config.js"></script>-->
+    <script src="js/inspinia.js"></script>
+
+		<!-- BOOTSTRAP JS -->
+	     <script src="js/bootstrap.min.js"></script>
+
+		<script src="js/app.min.js"></script>
+
+		<script src="smartAdmin/js/speech/voicecommand.min.js"></script>
+
+		<script src="smartAdmin/js/plugin/morris/raphael.min.js"></script>
+		<script src="smartAdmin/js/plugin/morris/morris.min.js"></script>
+        <script src="smartAdmin/js/plugin/morris/morris-function.js"></script>
+</body>
+</html>
+
