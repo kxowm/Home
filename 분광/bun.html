@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+#fullbox{
+    padding: 5px;
+
+}
+
+#topHeader{
+    margin-bottom: 5px;
+}
+
+#leftNav{
+   border: 1px solid black; 
+   height:560px;
+   margin-right: 5px;
+
+}
+
+#rightContent{
+    border: 1px solid red; height: 560px;
+}
+
+#lineChart{
+    height:200px;
+
+}
+
+#SelectElement{
+ width: 80px;
+}
+
+#Select-Element-box{
+    border: 1px solid;
+    margin-right: 10px;
+    height: 260px;
+}
+
+#grape-Controller{
+ width:15px;
+
+}
+
+#grape-Controller-box{
+    border: 1px solid;
+    width: 400px;
+
+}
+
+#save-button{
+    float: right;
+    margin-right: 15px;
+}
+
+.Laser, .Spectrometer, .Measure, .ExperimentControl{
+    border: 1px solid black;
+    margin-top: 20px;
+    width:100%;
+
+}
+
+.loadData{
+    float: right; 
+    margin-top: 0px;
+    
+}
+
+.graph-content{
+    clear: both;
+    background-color: beige; 
+    border: 1px solid;
+    margin-bottom: 15px;
+
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="fullbox">
+    <div class="row" id="topHeader">
+        <header class="col-md-12">
+         <div class="col-md-3" style="background-color: coral; height:30px;"> 분광분석 통합 장비 제어 프로그램 </div> 
+         <div class="col-md-9" style="background-color: cadetblue; height:30px;"><i class="fa fa-folder-open" aria-hidden="true"></i></div>
+        </header>
+    </div>
+
+<div class="row" style="margin-left: 3px">
+        <nav class="col-md-3"  id="leftNav">
+            LIBS Run
+         <div class="Laser">
+             <strong>Laser</strong><br>
+             <span><button style="width: 65px"> RUN  </button></span>&nbsp;&nbsp;
+             <span><button style="width: 65px"> STOP </button></span>&nbsp;&nbsp;
+             <span><button style="width: 65px"> SET  </button></span>
+            
+             <span><span>
+         </div>
+
+          <div class="Spectrometer">
+             <strong>Spectrometer</strong><br>
+             <span><button style="width: 65px"> RUN  </button></span>&nbsp;&nbsp;
+             <span><button style="width: 65px"> STOP </button></span>&nbsp;&nbsp;
+             <span><button style="width: 65px"> SET  </button></span>
+            
+             <span><span>
+         </div>
+
+          <div class="Measure">
+             <strong>Measure</strong><br>
+
+            Number of averages &nbsp;
+            
+            <select>
+                <option value="">10</option>
+                <option value="">9</option>
+                <option value="">8</option>
+            </select>
+            
+            <br>
+            
+            Number of measure &nbsp;
+             <select>
+                <option value="">10</option>
+                <option value="">9</option>
+                <option value="">8</option>
+            </select>
+            
+            
+             
+         </div>
+
+         
+        <div style="margin-top: 30px; padding: 10px;">
+         <button>Auto Start</button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button>Manual Start</button>
+         </div>
+
+          <div class="ExperimentControl">
+             <strong>Experiment Control</strong><br>
+
+             <div style="text-align: center">
+               <span><button style="width: 65px"> save..   </button></span><br><br>
+               <span><button style="width: 65px"> exprot </button></span>
+            </div>
+
+         </div>
+
+         <button style="margin-top:30px;">Montion Control Setting</button>
+
+
+        </nav>
+        <!--네비 끝 -->
+
+
+        <!--본문-->
+        <div class="col-md-8"  id="rightContent" style="width: 735px">
+            Analysis
+ 
+          <article>
+              <div><button class="loadData">Load data</button></div>
+
+              <div class="graph-content">
+                       
+                     <div id="lineChart"></div>
+                        
+              </div>
+
+        <div class="row">
+             <div class="col-md-12">
+
+                <div class="col-md-4" id="Select-Element-box">
+                    Select Element
+                        
+                    <span class="row">
+                        <table class="table table-striped col-md-5" id="SelectElement">
+                            <thead>
+                            <tr>
+                                <th>title</th>
+                                <th>Select</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Min</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Cu</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Co</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                             <tr>
+                                <td>Co</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                             <tr>
+                                <td>Co</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="col-md-5">
+                            <button type="">Pro</button>
+
+                        <br>  <br>  <br>  <br>  <br>  <br>
+
+                         <button type="">a</button>
+                        </div>
+                    </span>
+                </div>  
+
+                        <div class="col-md-6"  id="grape-Controller-box">
+                            <div class="table-responsive">
+                                <table class="table table-striped " id="grape-Controller">
+                                    <thead>
+                                    <tr>
+                                        <th>sample1</th>
+                                        <th>sample2</th>
+                                        <th>Element</th>
+                                        <th>WaveLength</th>
+                                        <th>Untensity</th>
+                                        <th>Preak area</th>
+                                        <th>...</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td> John </td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>John</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div>
+                            <button id="save-button">save</button>
+                        </div>
+
+                  </div>
+                  
+                    <!--<ul>
+                        <li>Calculate Peak area 적용시 상하 5% 제거 후 평균값 적용</li>
+                        <li>Calculate Intensity 적용시 상하 5% 제거 후 평균값 적용</li>
+                    </ul>-->
+             </div>
+         </div>
+    </article>
+ </div>
+</div>
+
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <!-- d3 and c3 charts -->
+    <script src="js/plugins/d3/d3.min.js"></script>
+    <script src="js/plugins/c3/c3.min.js"></script>
+    <script src="js/plugins/c3/c3Function.js"></script>
+
+    
+    </div>
+</body>
+</html>
