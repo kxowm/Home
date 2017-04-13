@@ -1,7 +1,0 @@
-[
-        {"selector":"#DB_Server", "detail":["Used", "222","Write","444" ,"Session","99999"]},
-         {"selector":"#Manager", "detail":["Used", "222","Write","444" ,"Session","99999","Fail","99","Stop","1000"]}
-      
-        
-
-]
